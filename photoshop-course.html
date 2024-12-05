@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورس الفوتوشوب</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* نفس التنسيق مع تخصيص للفوتوشوب */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .video-container {
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid rgb(210, 39, 133);
+            border-radius: 20px;
+            background-color: white;
+            width: 80%;
+            max-width: 800px;
+        }
+        section {
+            border: 2px solid rgb(210, 39, 133);
+            border-radius: 60px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 50%;
+            max-width: 500px;
+        }
+        h1 {
+            color: rgb(210, 39, 133);
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: rgb(210, 39, 133);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(180, 30, 120);
+        }
+        iframe {
+            margin-top: 10px;
+            display: block;
+            border-radius: 10px;
+        }
+        /* تعديل حجم الفيديو الأول */
+        #photoshop-video1 iframe {
+            width: 800px;
+            height: 450px;
+        }
+        /* تعديل حجم الفيديوهات الأخرى */
+        .video-container:not(:first-child) iframe {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>كورس الفوتوشوب</h1>
+    </section>
+
+    <button onclick="goBackToCourses()">رجوع إلى الكورسات المتاحة</button>
+
+    <!-- فيديوهات كورس الفوتوشوب -->
+    <!-- فيديو 1 -->
+    <div class="video-container">
+        <h2>الفيديو الأول</h2>
+        <button onclick="playVideo('photoshop-video1')">شغل الفيديو</button>
+        <div id="photoshop-video1" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 2 -->
+    <div class="video-container">
+        <h2>الفيديو الثاني</h2>
+        <button onclick="playVideo('photoshop-video2')">شغل الفيديو</button>
+        <div id="photoshop-video2" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_2" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 3 -->
+    <div class="video-container">
+        <h2>الفيديو الثالث</h2>
+        <button onclick="playVideo('photoshop-video3')">شغل الفيديو</button>
+        <div id="photoshop-video3" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_3" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 4 -->
+    <div class="video-container">
+        <h2>الفيديو الرابع</h2>
+        <button onclick="playVideo('photoshop-video4')">شغل الفيديو</button>
+        <div id="photoshop-video4" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 5 -->
+    <div class="video-container">
+        <h2>الفيديو الخامس</h2>
+        <button onclick="playVideo('photoshop-video5')">شغل الفيديو</button>
+        <div id="photoshop-video5" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_5" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 6 -->
+    <div class="video-container">
+        <h2>الفيديو السادس</h2>
+        <button onclick="playVideo('photoshop-video6')">شغل الفيديو</button>
+        <div id="photoshop-video6" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_6" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 7 -->
+    <div class="video-container">
+        <h2>الفيديو السابع</h2>
+        <button onclick="playVideo('photoshop-video7')">شغل الفيديو</button>
+        <div id="photoshop-video7" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_7" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 8 -->
+    <div class="video-container">
+        <h2>الفيديو الثامن</h2>
+        <button onclick="playVideo('photoshop-video8')">شغل الفيديو</button>
+        <div id="photoshop-video8" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_8" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 9 -->
+    <div class="video-container">
+        <h2>الفيديو التاسع</h2>
+        <button onclick="playVideo('photoshop-video9')">شغل الفيديو</button>
+        <div id="photoshop-video9" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_9" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 10 -->
+    <div class="video-container">
+        <h2>الفيديو العاشر</h2>
+        <button onclick="playVideo('photoshop-video10')">شغل الفيديو</button>
+        <div id="photoshop-video10" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_10" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 11 -->
+    <div class="video-container">
+        <h2>الفيديو الحادي عشر</h2>
+        <button onclick="playVideo('photoshop-video11')">شغل الفيديو</button>
+        <div id="photoshop-video11" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_11" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 12 -->
+    <div class="video-container">
+        <h2>الفيديو الثاني عشر</h2>
+        <button onclick="playVideo('photoshop-video12')">شغل الفيديو</button>
+        <div id="photoshop-video12" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_12" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- فيديو 13 -->
+    <div class="video-container">
+        <h2>الفيديو الثالث عشر</h2>
+        <button onclick="playVideo('photoshop-video13')">شغل الفيديو</button>
+        <div id="photoshop-video13" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_13" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        let lastPlayedVideo = null; // متغير لتخزين الفيديو الذي تم تشغيله
+
+        // دالة تشغيل الفيديو
+        function playVideo(videoId) {
+            // إخفاء الفيديو الذي كان مفتوحًا سابقًا
+            if (lastPlayedVideo && lastPlayedVideo !== videoId) {
+                document.getElementById(lastPlayedVideo).style.display = 'none';
+            }
+
+            // عرض الفيديو المطلوب فقط
+            document.getElementById(videoId).style.display = 'block';
+
+            // تحديث الفيديو الذي تم تشغيله
+            lastPlayedVideo = videoId;
+        }
+
+        // دالة الرجوع إلى الكورسات المتاحة
+        function goBackToCourses() {
+            window.location.href = 'courses.html'; // قم بتغيير هذا الرابط حسب الحاجة
+        }
+    </script>
+</body>
+</html>

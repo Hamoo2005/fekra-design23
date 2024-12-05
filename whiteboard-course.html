@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورس الوايت بورد</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        section {
+            border: 2px solid rgb(210, 39, 133);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            text-align: center; /* توسيط النص */
+        }
+        h1, h2 {
+            color: rgb(210, 39, 133);
+        }
+        button {
+            padding: 10px 20px;
+            background-color: rgb(210, 39, 133);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: rgb(170, 30, 100);
+        }
+        .video-container {
+            text-align: center; /* توسيط الأزرار والفيديوهات */
+            margin: 10px 0;
+        }
+        .video-container button {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>كورس الوايت بورد</h1>
+    </header>
+    
+    <!-- زر الرجوع -->
+    <button onclick="goBackToCourses()">رجوع إلى الكورسات المتاحة</button>
+
+    <!-- قسم الشرح -->
+    <section>
+        <h2>فيديوهات الشرح (35 فيديو)</h2>
+        <div class="video-container">
+            <!-- استخدام حلقة لتكرار الفيديوهات -->
+            <script>
+                for (let i = 1; i <= 35; i++) {
+                    document.write(`
+                        <div>
+                            <h3>الفيديو ${i}</h3>
+                            <button onclick="playVideo('video-${i}')">شغل الفيديو ${i}</button>
+                            <div id="video-${i}" style="display:none; margin-top: 10px;">
+                                <iframe src="https://www.youtube.com/embed/your_video_${i}" 
+                                    width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- قسم السيشن -->
+    <section>
+        <h2>سيشن العملي (5 سيشنات)</h2>
+        <div class="video-container">
+            <!-- استخدام حلقة لتكرار السيشن -->
+            <script>
+                for (let i = 1; i <= 5; i++) {
+                    document.write(`
+                        <div>
+                            <h3>السيشن ${i}</h3>
+                            <button onclick="playVideo('session-${i}')">شغل السيشن ${i}</button>
+                            <div id="session-${i}" style="display:none; margin-top: 10px;">
+                                <iframe src="https://www.youtube.com/embed/your_session_${i}" 
+                                    width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </section>
+
+    <script>
+        let lastPlayedVideo = null; // متغير لتخزين الفيديو الذي تم تشغيله
+
+        // دالة تشغيل الفيديو أو السيشن
+        function playVideo(videoId) {
+            // إخفاء الفيديو الذي كان مفتوحًا سابقًا
+            if (lastPlayedVideo && lastPlayedVideo !== videoId) {
+                document.getElementById(lastPlayedVideo).style.display = 'none';
+            }
+
+            // عرض الفيديو الحالي
+            const currentVideo = document.getElementById(videoId);
+            currentVideo.style.display = 'block';
+
+            // تحديث الفيديو الذي تم تشغيله
+            lastPlayedVideo = videoId;
+        }
+
+        // دالة الرجوع إلى الكورسات المتاحة
+        function goBackToCourses() {
+            window.location.href = 'courses.html'; // قم بتغيير "courses.html" إذا كان اسم الملف مختلفًا.
+        }
+    </script>
+</body>
+</html>

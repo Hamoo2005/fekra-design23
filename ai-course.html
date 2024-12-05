@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورس الذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        section {
+            border: 2px solid rgb(210, 39, 133);
+            border-radius: 60px;
+            padding: 40px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+        }
+
+        h1 {
+            color: rgb(210, 39, 133);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgb(210, 39, 133);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(180, 30, 120);
+        }
+
+        .video-container {
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid rgb(210, 39, 133);
+            border-radius: 20px;
+            background-color: white;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        iframe {
+            margin-top: 10px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        /* تعديل حجم الفيديو الأول */
+        #ai-video1 iframe {
+            width: 800px;
+            height: 450px;
+        }
+
+        /* تعديل حجم الفيديوهات الأخرى */
+        .video-container:not(:first-child) iframe {
+            width: 560px;
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>كورس الذكاء الاصطناعي</h1>
+    </section>
+    
+    <!-- زر الرجوع -->
+    <button onclick="goBackToCourses()">رجوع إلى الكورسات المتاحة</button>
+
+    <!-- فيديوهات كورس الذكاء الاصطناعي -->
+    <div class="video-container">
+        <h2>الفيديو الأول</h2>
+        <button onclick="playVideo('ai-video1')">شغل الفيديو</button>
+        <div id="ai-video1" style="display:none;">
+            <iframe src="https://t.me/hhshshsriru/4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الثاني</h2>
+        <button onclick="playVideo('ai-video2')">شغل الفيديو</button>
+        <div id="ai-video2" style="display:none;">
+            <iframe src="https://geo.dailymotion.com/player.html?video=x8ifn0u" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الثالث</h2>
+        <button onclick="playVideo('ai-video3')">شغل الفيديو</button>
+        <div id="ai-video3" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_3" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الرابع</h2>
+        <button onclick="playVideo('ai-video4')">شغل الفيديو</button>
+        <div id="ai-video4" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_4" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>الفيديو الخامس</h2>
+        <button onclick="playVideo('ai-video5')">شغل الفيديو</button>
+        <div id="ai-video5" style="display:none;">
+            <iframe src="https://www.youtube.com/embed/your_video_5" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // دالة تشغيل الفيديو
+        function playVideo(videoId) {
+            // إخفاء كل الفيديوهات المفتوحة
+            const videos = document.querySelectorAll('div[id^="ai-video"]');
+            videos.forEach(video => video.style.display = 'none');
+            
+            // عرض الفيديو الذي تم الضغط عليه فقط
+            const video = document.getElementById(videoId);
+            video.style.display = video.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // دالة الرجوع إلى الكورسات المتاحة
+        function goBackToCourses() {
+            window.location.href = 'courses.html'; // قم بتغيير "courses.html" إذا كان اسم الصفحة مختلفًا.
+        }
+    </script>
+</body>
+</html>
